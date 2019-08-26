@@ -11,15 +11,19 @@
 <body>
   <div id="app">
     <h1>ToDos</h1>
-    <input type="text" v-model="newTodo"/>
+    <div id="form" class="flex">
+      <input type="text" v-model="newTodo"/>
 
-    <label for="high"><input type="radio" name="priority" id="high" v-model="newPriority" value="high" />High</label>
+      <input type="radio" id="high" v-model="newPriority" value="high" />
+      <label for="high">High</label>
 
-    <label for="low"><input type="radio" name="priority" id="low" v-model="newPriority" value="low">Low</label>
+      <input type="radio" id="low" v-model="newPriority" value="low">
+      <label for="low">Low</label>
 
-    <button @click="saveItem">Save Item</button>
+      <button @click="saveItem">Save Item</button>
+    </div>
     <ul>
-      <li class="todo" v-for="todo in todos">{{todo.name}}</li>
+      <li v-for="todo in todos" :class="[todo.priority, flex]">{{todo.name}}</li>
     </ul>
   </div>
 </body>

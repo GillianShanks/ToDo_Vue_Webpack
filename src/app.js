@@ -5,9 +5,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
     el: "#app",
     data: {
-      todos: [{name: "Clean dishes", priority: "High"}, {name: "Make lunch", priority: "High"}, {name: "Tidy room", priority: "Low"}],
+      todos: [
+        {name: "Clean dishes", priority: "high"},
+        {name: "Make lunch", priority: "high"},
+        {name: "Tidy room", priority: "low"}],
       newTodo: "",
-      newPriority: ""
+      newPriority: "",
+      flex: 'flex'
     },
     methods: {
       saveItem: function(){

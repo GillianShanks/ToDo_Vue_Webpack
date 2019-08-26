@@ -1,0 +1,63 @@
+.flex{
+  display: flex;
+}
+
+#app {
+  width: 50%;
+  margin: 0 auto;
+  font-family: 'Lato', sans-serif;
+}
+
+ul {
+  margin:0;
+  padding:0;
+  list-style-type: none;
+}
+
+li {
+  margin-top: 1em;
+  padding: 1em;
+  justify-content: space-between;
+}
+
+li.high {
+  border: 2px solid green;
+}
+
+li.low {
+  border: 2px solid red;
+}
+
+input[type="text"] {
+	padding: 1em;
+	width: 40%;
+  outline: none;
+}
+
+label {
+  padding-left: 0.4em;
+  padding-right: 1em;
+  align-self: center;
+  /* border: 1px solid blue; */
+  font-size: 1em;
+}
+
+input[type="radio"]{
+  align-self: center;
+  margin-left: 1em;
+}
+
+button{
+	padding: 1em 0em 1em 0em;
+	background: #000;
+	color: #fff;
+	cursor: pointer;
+	border: 2px solid #000;
+  font-size: 1em;
+  flex:1;
+  outline: none;
+}
+
+button:hover{
+  background: grey;
+}
