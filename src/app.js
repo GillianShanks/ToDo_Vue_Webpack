@@ -7,11 +7,15 @@ document.addEventListener("DOMContentLoaded", () => {
     data: {
       todos: [{name: "Clean dishes", priority: "High"}, {name: "Make lunch", priority: "High"}, {name: "Tidy room", priority: "Low"}],
       newTodo: "",
+      newPriority: ""
     },
     methods: {
       saveItem: function(){
-        this.todos.push(this.newTodo);
-        this.newTodo = "";
+        if (this.newTodo !== "" && this.newPriority !== ""){
+          const newItem = {name: this.newTodo, priority: this.newPriority};
+          this.todos.push(newItem);
+          this.newTodo = "";
+        }
 
       }
     }

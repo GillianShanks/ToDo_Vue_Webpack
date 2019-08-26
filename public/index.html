@@ -13,10 +13,10 @@
     <h1>ToDos</h1>
     <input type="text" v-model="newTodo"/>
 
-    <label for="high"><input type="radio" name="priority" id="high" value="high" />High</label>
+    <label for="high"><input type="radio" name="priority" id="high" v-model="newPriority" value="high" />High</label>
 
-    <label for="low"><input type="radio" name="priority" id="low" value="low">Low</label>
-    
+    <label for="low"><input type="radio" name="priority" id="low" v-model="newPriority" value="low">Low</label>
+
     <button @click="saveItem">Save Item</button>
     <ul>
       <li class="todo" v-for="todo in todos">{{todo.name}}</li>
