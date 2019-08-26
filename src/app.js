@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     el: "#app",
     data: {
-      todos: ["Clean dishes", "Make lunch", "Tidy room"],
+      todos: [{name: "Clean dishes", priority: "High"}, {name: "Make lunch", priority: "High"}, {name: "Tidy room", priority: "Low"}],
       newTodo: "",
     },
     methods: {
